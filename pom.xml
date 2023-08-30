@@ -83,8 +83,8 @@
     <slf4j.version>1.7.36</slf4j.version>
     <reload4j.version>1.2.25</reload4j.version>
     <spark.scala-2.11.version>2.4.5</spark.scala-2.11.version>
-    <spark.scala-2.12.version>2.4.5</spark.scala-2.12.version>
-    <spark.version>${spark.scala-2.11.version}</spark.version>
+    <spark.scala-2.12.version>3.3.0</spark.scala-2.12.version>
+    <spark.version>${spark.scala-2.12.version}</spark.version>
     <hive.version>3.0.0</hive.version>
     <commons-codec.version>1.9</commons-codec.version>
     <httpclient.version>4.5.13</httpclient.version>
@@ -1140,14 +1140,14 @@
       </properties>
     </profile>
     <profile>
-      <id>scala-2.11</id>
+      <id>scala211</id>
       <properties>
         <scala.binary.version>2.11</scala.binary.version>
         <scala.version>2.11.12</scala.version>
       </properties>
     </profile>
     <profile>
-      <id>scala-2.12</id>
+      <id>scala212</id>
       <properties>
         <scala.binary.version>2.12</scala.binary.version>
         <scala.version>2.12.15</scala.version>
@@ -1179,7 +1179,7 @@
     <profile>
       <id>spark3</id>
       <properties>
-        <spark.version>3.2.3</spark.version>
+        <spark.version>3.3.0</spark.version>
         <java.version>1.8</java.version>
         <py4j.version>0.10.9.7</py4j.version>
         <json4s.version>3.7.0-M11</json4s.version>
