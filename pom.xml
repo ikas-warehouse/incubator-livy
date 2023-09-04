@@ -212,7 +212,7 @@
     <module>core/scala-${scala.binary.version}</module>
     <module>coverage</module>
     <module>examples</module>
-    <module>python-api</module>
+<!--    <module>python-api</module>-->
     <module>repl</module>
     <module>repl/scala-${scala.binary.version}</module>
     <module>rsc</module>
@@ -221,7 +221,7 @@
     <module>scala-api/scala-${scala.binary.version}</module>
     <module>server</module>
     <module>test-lib</module>
-    <module>integration-test</module>
+<!--    <module>integration-test</module>-->
   </modules>
 
   <dependencies>

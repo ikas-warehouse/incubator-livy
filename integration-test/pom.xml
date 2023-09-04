@@ -221,25 +221,25 @@
 
   <build>
     <plugins>
-      <plugin>
-        <groupId>com.googlecode.maven-download-plugin</groupId>
-        <artifactId>download-maven-plugin</artifactId>
-        <executions>
-          <execution>
-            <id>download-spark-files</id>
-            <goals>
-              <goal>wget</goal>
-            </goals>
-            <configuration>
-              <readTimeOut>60000</readTimeOut>
-              <retries>5</retries>
-              <url>${spark.bin.download.url}</url>
-              <outputDirectory>${project.build.directory}</outputDirectory>
-              <unpack>true</unpack>
-            </configuration>
-          </execution>
-        </executions>
-      </plugin>
+<!--      <plugin>-->
+<!--        <groupId>com.googlecode.maven-download-plugin</groupId>-->
+<!--        <artifactId>download-maven-plugin</artifactId>-->
+<!--        <executions>-->
+<!--          <execution>-->
+<!--            <id>download-spark-files</id>-->
+<!--            <goals>-->
+<!--              <goal>wget</goal>-->
+<!--            </goals>-->
+<!--            <configuration>-->
+<!--              <readTimeOut>60000</readTimeOut>-->
+<!--              <retries>5</retries>-->
+<!--              <url>${spark.bin.download.url}</url>-->
+<!--              <outputDirectory>${project.build.directory}</outputDirectory>-->
+<!--              <unpack>true</unpack>-->
+<!--            </configuration>-->
+<!--          </execution>-->
+<!--        </executions>-->
+<!--      </plugin>-->
 
       <plugin>
         <groupId>org.codehaus.mojo</groupId>

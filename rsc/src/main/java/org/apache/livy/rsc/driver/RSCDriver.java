@@ -97,8 +97,8 @@ public class RSCDriver extends BaseProtocol {
 
   public RSCDriver(SparkConf conf, RSCConf livyConf) throws Exception {
     Set<PosixFilePermission> perms = PosixFilePermissions.fromString("rwx------");
-    this.localTmpDir = Files.createTempDirectory("rsc-tmp",
-      PosixFilePermissions.asFileAttribute(perms)).toFile();
+//    this.localTmpDir = Files.createTempDirectory("rsc-tmp", PosixFilePermissions.asFileAttribute(perms)).toFile();
+    this.localTmpDir = Files.createTempDirectory("rsc-tmp").toFile();
     this.executor = Executors.newCachedThreadPool();
     this.jobQueue = new LinkedList<>();
     this.clients = new ConcurrentLinkedDeque<>();

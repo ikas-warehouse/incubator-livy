@@ -375,7 +375,7 @@ class LivyConf(loadDefaults: Boolean) extends ClientConf[LivyConf](null) {
 
   /** Return the path to the spark-submit executable. */
   def sparkSubmit(): String = {
-    sparkHome().map { _ + File.separator + "bin" + File.separator + "spark-submit" }.get
+    sparkHome().map { _ + File.separator + "bin" + File.separator + "spark-submit.cmd" }.get
   }
 
   private val configDir: Option[File] = {

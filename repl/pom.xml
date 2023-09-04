@@ -136,6 +136,7 @@
     <dependency>
       <groupId>com.esotericsoftware</groupId>
       <artifactId>kryo-shaded</artifactId>
+      <scope>provided</scope>
     </dependency>
 
     <dependency>
@@ -191,7 +192,7 @@
                   <include>org.json4s:json4s-core_${scala.binary.version}</include>
                   <include>org.json4s:json4s-jackson_${scala.binary.version}</include>
                   <include>org.json4s:json4s-scalap_${scala.binary.version}</include>
-                  <include>com.esotericsoftware:kryo-shaded</include>
+<!--                  <include>com.esotericsoftware:kryo-shaded</include>-->
                 </includes>
               </artifactSet>
               <filters>

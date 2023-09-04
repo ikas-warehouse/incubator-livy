@@ -238,6 +238,7 @@ class ContextLauncher {
       };
       return new ChildProcess(conf, promise, child, confFile);
     } else {
+      LOG.info("SparkLauncher Main：{}", RSCDriverBootstrapper.class.getName());
       final SparkLauncher launcher = new SparkLauncher();
       launcher.setSparkHome(System.getenv(SPARK_HOME_ENV));
       launcher.setAppResource(SparkLauncher.NO_RESOURCE);
@@ -302,9 +303,14 @@ class ContextLauncher {
     }
 
     File file = File.createTempFile("livyConf", ".properties");
-    Files.setPosixFilePermissions(file.toPath(), EnumSet.of(OWNER_READ, OWNER_WRITE));
+    // win、mac、nix|nux|aix
+    String os = System.getProperty("os.name").toLowerCase();
+    if (os.contains("win")) {
+      LOG.info("Windows skip.");
+    } else {
+      Files.setPosixFilePermissions(file.toPath(), EnumSet.of(OWNER_READ, OWNER_WRITE));
+    }
     //file.deleteOnExit();
-
     Writer writer = new OutputStreamWriter(new FileOutputStream(file), UTF_8);
     try {
       confView.store(writer, "Livy App Context Configuration");
